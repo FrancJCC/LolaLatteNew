@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>Meet Our Expert Chefs</h1>
+                    <h1>Conozca a nuestros empleados</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">chefs</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Empleados</a></li>
                     </ul>
                 </div>
             </div>

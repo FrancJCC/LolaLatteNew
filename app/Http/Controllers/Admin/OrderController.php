@@ -54,7 +54,7 @@ class OrderController extends Controller
     function orderStatusUpdate(Request $request, string $id) : RedirectResponse|Response {
         $request->validate([
             'payment_status' => ['required', 'in:Pendiente,Completado'],
-            'order_status' => ['required', 'in:Pendiente,En Proceso,Cancelado,Declinado']
+            'order_status' => ['required', 'in:Pendiente,En caProceso,Cancelado,Declinado']
         ]);
 
         $order = Order::findOrFail($id);
@@ -76,10 +76,10 @@ class OrderController extends Controller
         try{
             $order = Order::findOrFail($id);
             $order->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         }catch(\Exception $e){
             logger($e);
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

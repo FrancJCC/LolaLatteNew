@@ -1,4 +1,4 @@
-<section class="fp__banner" style="background: url({{ asset('frontend/images/banner_bg.jpg') }});">
+<section class="fp__banner" style="background: url({{ asset('frontend/images/waffleCarrisel.jpeg') }});">
     <div class="fp__banner_overlay">
         <div class="row banner_slider">
             @foreach ($sliders as $slider)
@@ -20,10 +20,10 @@
                                 <div class="fp__banner_text wow fadeInRight" data-wow-duration="1s">
                                     <h1>{!! $slider->title !!}</h1>
                                     <h3>{!! $slider->sub_title !!}</h3>
-                                    <p>{!! $slider->short_description !!}</p>
+                                    <p2>{!! $slider->short_description !!}</p2>
                                     <ul class="d-flex flex-wrap">
                                         @if ($slider->button_link)
-                                        <li><a class="common_btn" href="{{ $slider->button_link }}">shop now</a></li>
+                                        <li><a class="common_btn" href="{{ $slider->button_link }}">Comprar Ahora</a></li>
                                         @endif
                                     </ul>
                                 </div>

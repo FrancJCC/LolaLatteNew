@@ -148,7 +148,7 @@ class FrontendController extends Controller
 
         Mail::send(new ContactMail($request->name, $request->email, $request->subject, $request->message));
 
-        return response(['status' => 'success', 'message' => 'Message Sent Successfully!']);
+        return response(['status' => 'success', 'message' => 'Mensaje enviado con exito!']);
     }
 
     function blog(Request $request) : View {
@@ -220,7 +220,7 @@ class FrontendController extends Controller
         ]);
 
         if(!Auth::check()){
-            throw ValidationException::withMessages(['Please Login to Request Reservation']);
+            throw ValidationException::withMessages(['Por favor, inicie sesion para solicitar reserva']);
         }
 
         $reservation = new Reservation();
@@ -234,7 +234,7 @@ class FrontendController extends Controller
         $reservation->status = 'pending';
         $reservation->save();
 
-        return response(['status' => 'success', 'message' => 'Request send successfully']);
+        return response(['status' => 'success', 'message' => 'Requrimiento enviado con exito']);
     }
 
     function subscribeNewsletter(Request $request) : Response
@@ -247,7 +247,7 @@ class FrontendController extends Controller
         $subscriber->email = $request->email;
         $subscriber->save();
 
-        return response(['status' => 'success', 'message' => 'Subscribed Successfully!']);
+        return response(['status' => 'success', 'message' => 'Suscrito con exito!']);
     }
 
     function products(Request $request) : View {
@@ -312,12 +312,12 @@ class FrontendController extends Controller
 
 
         if(count($hasPurchased) == 0){
-            throw ValidationException::withMessages(['Please Buy The Product Before Submit a Review!']);
+            throw ValidationException::withMessages(['Por favor, compre el podructo despues de subir su Review!']);
         }
 
         $alreadyReviewed = ProductRating::where(['user_id' => $user->id, 'product_id' => $request->product_id])->exists();
         if($alreadyReviewed){
-            throw ValidationException::withMessages(['You already reviewed this product']);
+            throw ValidationException::withMessages(['Ya revisaste este producto']);
         }
 
         $review = new ProductRating();
@@ -328,7 +328,7 @@ class FrontendController extends Controller
         $review->status = 0;
         $review->save();
 
-        toastr()->success('Review added successfully and waiting to approve');
+        toastr()->success('Revision agregada con exito y esperando aprobar');
 
         return redirect()->back();
     }
@@ -341,13 +341,13 @@ class FrontendController extends Controller
         $coupon = Coupon::where('code', $code)->first();
 
         if(!$coupon) {
-            return response(['message' => 'Invalid Coupon Code.'], 422);
+            return response(['message' => 'Cupon invalido.'], 422);
         }
         if($coupon->quantity <= 0){
-            return response(['message' => 'Coupon has been fully redeemed.'], 422);
+            return response(['message' => 'Cupon aplicado exitosamente.'], 422);
         }
         if($coupon->expire_date < now()){
-            return response(['message' => 'Coupon hs expired.'], 422);
+            return response(['message' => 'Su cupon ha expirado.'], 422);
         }
 
         if($coupon->discount_type === 'percent') {
@@ -360,17 +360,17 @@ class FrontendController extends Controller
 
         session()->put('coupon', ['code' => $code, 'discount' => $discount]);
 
-        return response(['message' => 'Coupon Applied Successfully.', 'discount' => $discount, 'finalTotal' => $finalTotal, 'coupon_code' => $code]);
+        return response(['message' => 'Cupon aplicado exitosamente.', 'discount' => $discount, 'finalTotal' => $finalTotal, 'coupon_code' => $code]);
 
     }
 
     function destroyCoupon() {
         try{
             session()->forget('coupon');
-            return response(['message' => 'Coupon Removed!', 'grand_cart_total' => grandCartTotal()]);
+            return response(['message' => 'Cupon removido!', 'grand_cart_total' => grandCartTotal()]);
         }catch(\Exception $e){
             logger($e);
-            return response(['message' => 'Something went wrong']);
+            return response(['message' => 'Algo salio mal']);
 
         }
     }

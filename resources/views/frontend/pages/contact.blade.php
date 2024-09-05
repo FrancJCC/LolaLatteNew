@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>contact with us</h1>
+                    <h1>Contactanos</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">contact</a></li>
+                        <li><a href="{{ url('/') }}">Casa</a></li>
+                        <li><a href="javascript:;">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                     <div class="fp__contact_info">
                         <span><i class="fas fa-street-view"></i></span>
                         <div class="text">
-                            <h3>location</h3>
+                            <h3>Locación</h3>
                             <p>{!! @$contact->address !!}</p>
                         </div>
                     </div>
@@ -63,12 +63,12 @@
                     <div class="col-xl-12 wow fadeInUp" data-wow-duration="1s">
                         <form class="fp__contact_form">
                             @csrf
-                            <h3>contact</h3>
+                            <h3>Contacto</h3>
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6">
                                     <div class="fp__contact_form_input">
                                         <span><i class="fal fa-user-alt"></i></span>
-                                        <input type="text" placeholder="Name" name="name">
+                                        <input type="text" placeholder="Nombre" name="name">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6">
@@ -81,15 +81,15 @@
                                 <div class="col-xl-12 col-lg-12">
                                     <div class="fp__contact_form_input">
                                         <span><i class="fal fa-book"></i></span>
-                                        <input type="text" placeholder="Subject" name="subject">
+                                        <input type="text" placeholder="Tema" name="subject">
                                     </div>
                                 </div>
                                 <div class="col-xl-12">
                                     <div class="fp__contact_form_input textarea">
                                         <span><i class="fal fa-book"></i></span>
-                                        <textarea rows="8" placeholder="Message" name="message"></textarea>
+                                        <textarea rows="8" placeholder="Mensaje" name="message"></textarea>
                                     </div>
-                                    <button type="submit" class="submit_btn">send message</button>
+                                    <button type="submit" class="submit_btn">Enviar Mensaje</button>
                                 </div>
                             </div>
                         </form>

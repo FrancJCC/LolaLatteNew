@@ -5,25 +5,25 @@
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label for="">Site Name</label>
+                    <label for="">Nombre del sitio </label>
                     <input name="site_name" type="text" class="form-control" value="{{config('settings.site_name')}}">
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Site Email</label>
+                            <label for="">Correo electrónico del sitio</label>
                             <input name="site_email" type="text" class="form-control" value="{{config('settings.site_email')}}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Site Phone</label>
+                            <label for="">Teléfono del sitio</label>
                             <input name="site_phone" type="text" class="form-control" value="{{config('settings.site_phone')}}">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="">Default Currency</label>
+                    <label for=""> Moneda Predeterminada</label>
                     <select name="site_default_currency" id="" class="select2 form-control">
                         <option value="">Select</option>
                         @foreach (config('currencys.currency_list') as $currency)
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Currency Icon Position</label>
+                            <label for="">Posición del icono de la moneda</label>
                             <select name="site_currency_icon_position" id="" class="select2 form-control">
                                 <option @selected(config('settings.site_currency_icon_position') === 'right') value="right">Right</option>
                                 <option @selected(config('settings.site_currency_icon_position') === 'left') value="left">Left</option>
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
         </div>
     </div>

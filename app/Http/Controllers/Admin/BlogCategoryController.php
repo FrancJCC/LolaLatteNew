@@ -49,7 +49,7 @@ class BlogCategoryController extends Controller
         $category->status = $request->status;
         $category->save();
 
-        toastr()->success('Created Successfully!');
+        toastr()->success('Creado exitosamente!');
 
         return to_route('admin.blog-category.index');
     }
@@ -80,7 +80,7 @@ class BlogCategoryController extends Controller
         $category->status = $request->status;
         $category->save();
 
-        toastr()->success('Update Successfully!');
+        toastr()->success('Actualizado exitosamente!');
 
         return to_route('admin.blog-category.index');
     }
@@ -93,9 +93,9 @@ class BlogCategoryController extends Controller
         try {
             $category = BlogCategory::findOrFail($id);
             $category->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salio mal!']);
         }
     }
 }

@@ -453,6 +453,10 @@
     .fp__banner_text p {
         font-size: 16px;
     }
+    
+    .fp__banner_text p2 {
+        font-size: 16px;
+    }
 
     .common_btn {
         padding: 10px 55px 10px 20px !important;

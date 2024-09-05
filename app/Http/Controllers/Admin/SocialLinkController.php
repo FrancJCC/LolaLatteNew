@@ -41,7 +41,7 @@ class SocialLinkController extends Controller
         $link->status = $request->status;
         $link->save();
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado con éxito');
 
         return redirect()->route('admin.social-link.index');
 
@@ -68,7 +68,7 @@ class SocialLinkController extends Controller
         $link->status = $request->status;
         $link->save();
 
-        toastr()->success('Update Successfully');
+        toastr()->success('Actualizado con exito');
 
         return redirect()->route('admin.social-link.index');
     }
@@ -81,9 +81,9 @@ class SocialLinkController extends Controller
         try {
             $link = SocialLink::findOrFail($id);
             $link->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

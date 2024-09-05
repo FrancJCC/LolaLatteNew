@@ -21,7 +21,7 @@ class ProfileController extends Controller
         $user->email = $request->email;
         $user->save();
 
-        toastr()->success('Profile Updated Successfully');
+        toastr()->success('Perfil actualizado');
 
         return redirect()->back();
     }
@@ -30,7 +30,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         $user->password = bcrypt($request->password);
         $user->save();
-        toastr()->success('Password Updated Successfully');
+        toastr()->success('Se cambio la contraseña exitosamente');
 
         return redirect()->back();
     }
@@ -43,6 +43,6 @@ class ProfileController extends Controller
         $user->avatar = $imagePath;
         $user->save();
 
-        return response(['status' => 'success', 'message' => 'Avatar Updated Successfully']);
+        return response(['status' => 'success', 'message' => 'Foto de perfil actualizado']);
     }
 }

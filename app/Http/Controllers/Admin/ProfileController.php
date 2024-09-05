@@ -40,7 +40,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         $user->password = bcrypt($request->password);
         $user->save();
-        toastr()->success('Password Updated Successfully');
+        toastr()->success('Contraseña actualizada con exito');
 
         return redirect()->back();
     }

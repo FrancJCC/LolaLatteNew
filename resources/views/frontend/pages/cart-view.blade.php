@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>cart view</h1>
+                    <h1>Vista del carrito</h1>
                     <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="#">cart view</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Vista del carrito</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,27 +35,27 @@
                                 <tbody>
                                     <tr>
                                         <th class="fp__pro_img">
-                                            Image
+                                            Imagen
                                         </th>
 
                                         <th class="fp__pro_name">
-                                            details
+                                            detalles
                                         </th>
 
                                         <th class="fp__pro_status">
-                                            price
+                                            Precio
                                         </th>
 
                                         <th class="fp__pro_select">
-                                            quantity
+                                            Cantidad
                                         </th>
 
                                         <th class="fp__pro_tk">
-                                            total
+                                            Total
                                         </th>
 
                                         <th class="fp__pro_icon">
-                                            <a class="clear_all" href="{{ route('cart.destroy') }}">clear all</a>
+                                            <a class="clear_all" href="{{ route('cart.destroy') }}">Eliminar todo </a>
                                         </th>
                                     </tr>
 
@@ -106,7 +106,7 @@
                                     @if (Cart::content()->count() === 0)
                                         <tr>
                                             <td colspan="6" class="text-center fp__pro_name"
-                                                style="width: 100%;display: inline;">Cart is empty!</td>
+                                                style="width: 100%;display: inline;">El carrito esta vacío!</td>
                                         </tr>
                                     @endif
                                 </tbody>
@@ -116,10 +116,10 @@
                 </div>
                 <div class="col-lg-4 wow fadeInUp" data-wow-duration="1s">
                     <div class="fp__cart_list_footer_button">
-                        <h6>total cart</h6>
-                        <p>subtotal: <span id="subtotal">{{ currencyPosition(cartTotal()) }}</span></p>
-                        <p>delivery: <span>$00.00</span></p>
-                        <p>discount: <span id="discount">
+                        <h6>total carritos</h6>
+                        <p>Subtotal: <span id="subtotal">{{ currencyPosition(cartTotal()) }}</span></p>
+                        <p>Tarifa de envío: <span>$00.00</span></p>
+                        <p>Descuento: <span id="discount">
                             @if (isset(session()->get('coupon')['discount']))
                             {{ config('settings.site_currency_icon') }} {{ session()->get('coupon')['discount'] }}
                             @else
@@ -134,8 +134,8 @@
                             @endif
                         </span></p>
                         <form id="coupon_form">
-                            <input type="text" id="coupon_code" name="code" placeholder="Coupon Code">
-                            <button type="submit">apply</button>
+                            <input type="text" id="coupon_code" name="code" placeholder="Codigo de cupón">
+                            <button type="submit">aplicar</button>
                         </form>
 
                        <div class="coupon_card">
@@ -152,7 +152,7 @@
                         @endif
                        </div>
 
-                        <a class="common_btn" href="{{ route('checkout.index') }}">checkout</a>
+                        <a class="common_btn" href="{{ route('checkout.index') }}">Verificar</a>
                     </div>
                 </div>
             </div>

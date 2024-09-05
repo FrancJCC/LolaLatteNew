@@ -28,7 +28,7 @@ class PrivacyPolicyController extends Controller
                 'content' => $request->content
             ]
         );
-        toastr()->success('Updated Successfully');
+        toastr()->success('Actualizado exitosamente');
 
         return redirect()->back();
     }

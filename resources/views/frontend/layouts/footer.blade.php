@@ -40,16 +40,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-sm-4 col-md-6 order-sm-4 order-lg-3">
-                    <div class="fp__footer_content">
-                        <h3>Links de Ayuda</h3>
-                        <ul>
-                            @foreach ($footerMenuTwo as $menuItem)
-                            <li><a href="{{ $menuItem['link'] }}">{{ $menuItem['label'] }}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
                 <div class="col-lg-3 col-sm-8 col-md-6 order-lg-4">
                     <div class="fp__footer_content">
                         <h3>Seguir por Correo</h3>

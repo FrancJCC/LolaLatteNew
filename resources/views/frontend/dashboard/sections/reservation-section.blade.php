@@ -7,10 +7,10 @@
                     <tbody>
                         <tr class="t_header">
                             <th>No</th>
-                            <th>Reseration Id</th>
-                            <th>Date/Time</th>
-                            <th>Person</th>
-                            <th>Status</th>
+                            <th>Id. de reserva</th>
+                            <th>Fecha/Hora</th>
+                            <th>Persona</th>
+                            <th>Estado</th>
 
                         </tr>
                         @foreach ($reservations as $reservation)
@@ -48,7 +48,7 @@
         </div>
         @foreach ($orders as $order)
         <div class="fp__invoice invoice_details_{{ $order->id }}">
-            <a class="go_back d-print-none"><i class="fas fa-long-arrow-alt-left"></i> go back</a>
+            <a class="go_back d-print-none"><i class="fas fa-long-arrow-alt-left"></i> Volver</a>
             <div class="fp__track_order d-print-none">
                 <ul>
 
@@ -98,9 +98,9 @@
                         <tbody>
                             <tr class="border_none">
                                 <th class="sl_no">SL</th>
-                                <th class="package">item description</th>
-                                <th class="price">Price</th>
-                                <th class="qnty">Quantity</th>
+                                <th class="package">Descripción del artículo</th>
+                                <th class="price">Precio</th>
+                                <th class="qnty">Cantidad</th>
                                 <th class="total">Total</th>
                             </tr>
 
@@ -156,7 +156,7 @@
                             </tr>
                             <tr>
                                 <td class="package coupon" colspan="3">
-                                    <b>(-) Discount coupon</b>
+                                    <b>(-) Cupón de descuento</b>
                                 </td>
                                 <td class="qnty">
                                     <b></b>
@@ -167,7 +167,7 @@
                             </tr>
                             <tr>
                                 <td class="package coast" colspan="3">
-                                    <b>(+) Shipping Cost</b>
+                                    <b>(+) Costo de envío</b>
                                 </td>
                                 <td class="qnty">
                                     <b></b>
@@ -178,7 +178,7 @@
                             </tr>
                             <tr>
                                 <td class="package" colspan="3">
-                                    <b>Total Paid</b>
+                                    <b>Total Pagado</b>
                                 </td>
                                 <td class="qnty">
                                     <b></b>

@@ -13,7 +13,7 @@
     <!--=============================
             WHY CHOOSE START
         ==============================-->
-    @include('frontend.home.components.why-choose')
+    <!--@include('frontend.home.components.why-choose')-->
     <!--=============================
             WHY CHOOSE END
         ==============================-->
@@ -22,7 +22,8 @@
     <!--=============================
             OFFER ITEM START
         ==============================-->
-    @include('frontend.home.components.offer-item')
+
+    <!--@include('frontend.home.components.offer-item')-->
 
     <!--=============================
         OFFER ITEM END
@@ -41,7 +42,7 @@
     <!--=============================
             ADD SLIDER START
         ==============================-->
-    @include('frontend.home.components.ad-slider')
+    <!--@include('frontend.home.components.ad-slider')-->
 
     <!--=============================
             ADD SLIDER END
@@ -51,7 +52,7 @@
     <!--=============================
             TEAM START
         ==============================-->
-    @include('frontend.home.components.team')
+    <!--@include('frontend.home.components.team')-->
     <!--=============================
             TEAM END
         ==============================-->
@@ -60,7 +61,8 @@
     <!--=============================
             DOWNLOAD APP START
         ==============================-->
-    @include('frontend.home.components.app-download')
+
+    <!--@include('frontend.home.components.app-download')-->
 
     <!--=============================
             DOWNLOAD APP END
@@ -70,7 +72,8 @@
     <!--=============================
            TESTIMONIAL  START
         ==============================-->
-    @include('frontend.home.components.testimonial')
+
+    <!--@include('frontend.home.components.testimonial')-->
 
     <!--=============================
             TESTIMONIAL END
@@ -80,7 +83,8 @@
     <!--=============================
             COUNTER START
         ==============================-->
-    @include('frontend.home.components.counter')
+
+    <!--@include('frontend.home.components.counter')-->
 
     <!--=============================
             COUNTER END

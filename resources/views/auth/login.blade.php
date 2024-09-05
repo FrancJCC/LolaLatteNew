@@ -9,10 +9,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>sign in</h1>
+                    <h1>Iniciar S<sión/h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">sign in</a></li>
+                        <li><a href="{{ url('/') }}">inicio</a></li>
+                        <li><a href="javascript:;">Iniciar de Sesión</a></li>
                     </ul>
                 </div>
             </div>
@@ -26,14 +26,14 @@
     <!--=========================
         SIGNIN START
     ==========================-->
-    <section class="fp__signin" style="background: url(images/login_bg.jpg);">
+    <section class="fp__signin" style="background: url(fronted/images/login_bg.jpg);">
         <div class="fp__signin_overlay pt_125 xs_pt_95 pb_100 xs_pb_70">
             <div class="container">
                 <div class="row wow fadeInUp" data-wow-duration="1s">
                     <div class="col-xxl-5 col-xl-6 col-md-9 col-lg-7 m-auto">
                         <div class="fp__login_area">
-                            <h2>Welcome back!</h2>
-                            <p>sign in to continue</p>
+                            <h2>Bienvenido Otravez!</h2>
+                            <p>inicia sesión para continuar</p>
                             <form action="{{ route('login') }}" method="POST">
                                 @csrf
                                 <div class="row">
@@ -57,7 +57,7 @@
                                                 <input class="form-check-input" type="checkbox" value=""
                                                     id="flexCheckDefault" name="remember">
                                                 <label class="form-check-label" for="flexCheckDefault">
-                                                    Remeber Me
+                                                    Recordarme
                                                 </label>
                                             </div>
                                             <a href="{{ route('password.request') }}">Forgot Password ?</a>
@@ -66,14 +66,14 @@
 
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
-                                            <button type="submit" class="common_btn">login</button>
+                                            <button type="submit" class="common_btn">Inicio de Sesión</button>
                                         </div>
                                     </div>
                                 </div>
                             </form>
-                            <p class="or"><span>or</span></p>
+                            <p class="or"><span>ó</span></p>
 
-                            <p class="create_account">Dont’t have an aceount ? <a href="{{ route('register') }}">Create Account</a>
+                            <p class="create_account">No tienes una cuenta ? <a href="{{ route('register') }}">Crear Cuenta</a>
                             </p>
                         </div>
                     </div>

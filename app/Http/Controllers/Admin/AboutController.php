@@ -35,7 +35,7 @@ class AboutController extends Controller
             ]
         );
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado exitosamente');
 
         return redirect()->back();
     }

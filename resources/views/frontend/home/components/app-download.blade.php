@@ -19,7 +19,7 @@
                                 <li>
                                     <a href="{{ @$appSection->play_store_link }}">
                                         <i class="fab fa-google-play"></i>
-                                        <p> <span>download from</span> google play </p>
+                                        <p> <span>Descargar desde</span> google play </p>
                                     </a>
                                 </li>
                                 @endif
@@ -27,7 +27,7 @@
                                 <li>
                                     <a href="{{ @$appSection->apple_store_link }}">
                                         <i class="fab fa-apple"></i>
-                                        <p> <span>download from</span> apple store </p>
+                                        <p> <span>Descargar desde</span> apple store </p>
                                     </a>
                                 </li>
                                 @endif

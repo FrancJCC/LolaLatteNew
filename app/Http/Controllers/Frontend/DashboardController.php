@@ -42,7 +42,7 @@ class DashboardController extends Controller
         $address->type = $request->type;
         $address->save();
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado exitosamente');
 
         return redirect()->back();
     }
@@ -59,7 +59,7 @@ class DashboardController extends Controller
         $address->type = $request->type;
         $address->save();
 
-        toastr()->success('Updated Successfully');
+        toastr()->success('Se guardo correctamente');
 
         return to_route('admin.dashboard');
     }
@@ -68,9 +68,9 @@ class DashboardController extends Controller
         $address = Address::findOrFail($id);
         if($address && $address->user_id === auth()->user()->id){
             $address->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente']);
 
         }
-        return response(['status' => 'error', 'message' => 'something went wrong!']);
+        return response(['status' => 'error', 'message' => 'Algo salio mal!']);
     }
 }

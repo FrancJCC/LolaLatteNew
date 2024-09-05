@@ -22,16 +22,16 @@ class ReservationController extends Controller
         $reservation = Reservation::findOrFail($request->id);
         $reservation->status = $request->status;
         $reservation->save();
-        return response(['status' => 'success', 'message' => 'updated successfully!']);
+        return response(['status' => 'success', 'message' => 'Actualizado exitosamente!!']);
     }
 
     function destroy(string $id) : Response {
         try {
             $reservation = Reservation::findOrFail($id);
             $reservation->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salio mal!']);
         }
     }
 }

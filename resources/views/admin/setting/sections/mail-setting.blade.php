@@ -7,19 +7,19 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Mail Driver</label>
+                            <label for="">Controlador de correo</label>
                             <input name="mail_driver" type="text" class="form-control" value="{{ config('settings.mail_driver') }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Mail Host</label>
+                            <label for="">Host de correo</label>
                             <input name="mail_host" type="text" class="form-control" value="{{ config('settings.mail_host') }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Mail Port</label>
+                            <label for="">Puerto de correo</label>
                             <input name="mail_port" type="text" class="form-control" value="{{ config('settings.mail_port') }}">
                         </div>
                     </div>
@@ -28,20 +28,20 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Mail Username</label>
+                            <label for="">Correo del usuario</label>
                             <input name="mail_username" type="text" class="form-control" value="{{ config('settings.mail_username') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Mail Password</label>
+                            <label for="">Contraseña de correo</label>
                             <input name="mail_password" type="text" class="form-control" value="{{ config('settings.mail_password') }}">
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Mail Encryption</label>
+                    <label for="">Cifrado de correo</label>
                     <input name="mail_encryption" type="text" class="form-control" value="{{ config('settings.mail_encryption') }}">
                 </div>
 

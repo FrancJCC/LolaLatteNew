@@ -9,7 +9,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <div class="form-group">
-                                <label>Site Color</label>
+                                <label>Color del sitio</label>
                                 <input type="text" class="form-control colorpickerinput" name="site_color" value="{{ config('settings.site_color') }}">
                             </div>
                         </div>
@@ -17,7 +17,7 @@
 
                 </div>
 
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
         </div>
     </div>

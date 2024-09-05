@@ -8,9 +8,9 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>Our Customar Feedbacks</h1>
+                    <h1>Nuestros comentarios personalizados</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
                         <li><a href="javascript:;">Testimonial</a></li>
                     </ul>
                 </div>

@@ -2,7 +2,7 @@
     aria-labelledby="v-pills-message-tab">
     <div class="fp_dashboard_body fp__change_password">
         <div class="fp__message">
-            <h3>Message</h3>
+            <h3>Mensaje</h3>
             <div class="fp__chat_area">
                 <div class="fp__chat_body">
 

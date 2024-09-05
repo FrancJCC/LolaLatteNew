@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>about US</h1>
+                    <h1>Acerca de nosotros</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">about us</a></li>
+                        <li><a href="{{ url('/') }}">Casa</a></li>
+                        <li><a href="javascript:;">Sobre nosotros</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="fp__about_video_text">
-                                <p>Watch Videos</p>
+                                <p>Ver Videos</p>
                                 <a class="play_btn venobox" data-autoplay="true" data-vbtype="video"
                                     href="{{ @$about->video_link }}">
                                     <i class=" fas fa-play"></i>
@@ -88,14 +88,14 @@
          <!--=============================
             COUNTER START
         ==============================-->
-        @include('frontend.home.components.counter')
+        <!-- @include('frontend.home.components.counter')-->
         <!--=============================
                 COUNTER END
         ==============================-->
         <!--=============================
            TESTIMONIAL  START
         ==============================-->
-        @include('frontend.home.components.testimonial')
+        <!--@include('frontend.home.components.testimonial')-->
         <!--=============================
                 TESTIMONIAL END
         ==============================-->

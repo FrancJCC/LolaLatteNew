@@ -165,7 +165,7 @@ For what reason would it be advisable for me to think about business content? Th
                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
                                     <tr>
                                         <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
-                                            <p style="font-weight: 800;">Delivery Address</p>
+                                            <p style="font-weight: 800;">Dirección de entrega</p>
                                             <p>{{ $order->address }}</p>
 
                                         </td>
@@ -176,7 +176,7 @@ For what reason would it be advisable for me to think about business content? Th
                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
                                     <tr>
                                         <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; text-align:right;">
-                                            <p style="font-weight: 800;">Estimated Delivery Time</p>
+                                            <p style="font-weight: 800;">Tiempo estimado de entrega</p>
                                             <p>{{ @$order->address->deliveryArea->min_delivery_time }} - {{ @$order->address->deliveryArea->max_delivery_time }}</p>
                                         </td>
                                     </tr>

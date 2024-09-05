@@ -46,7 +46,7 @@ class CustomPageBuilderController extends Controller
         $page->status = $request->status;
         $page->save();
 
-        toastr()->success('Created Successfully!');
+        toastr()->success('Creado exitosamente!');
 
         return to_route('admin.custom-page-builder.index');
     }
@@ -79,7 +79,7 @@ class CustomPageBuilderController extends Controller
         $page->status = $request->status;
         $page->save();
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!');
 
         return to_route('admin.custom-page-builder.index');
     }
@@ -92,9 +92,9 @@ class CustomPageBuilderController extends Controller
         try {
             $page = CustomPageBuilder::findOrFail($id);
             $page->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

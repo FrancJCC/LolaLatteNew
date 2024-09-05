@@ -20,7 +20,7 @@ aria-labelledby="v-pills-review-tab">
                     @if ($review->status === 1)
                     <span class="status active">Active</span>
                     @else
-                    <span class="status inactive">Pending</span>
+                    <span class="status inactive">Pendiente</span>
 
                     @endif
                 </div>

@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>menu Details</h1>
+                    <h1>Detalles del Menú</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">menu Details</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Detalles del Menú</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +100,7 @@
 
                             @if ($product->productOptions()->exists())
                                 <div class="details_extra_item">
-                                    <h5>select option <span>(optional)</span></h5>
+                                    <h5>Seleccionar opción <span>(optional)</span></h5>
                                     @foreach ($product->productOptions as $productOption)
                                         <div class="form-check">
                                             <input class="form-check-input v_product_option" name="product_option[]"
@@ -116,7 +116,7 @@
                             @endif
 
                             <div class="details_quentity">
-                                <h5>select quentity</h5>
+                                <h5>seleccionar cantidad</h5>
                                 <div class="quentity_btn_area d-flex flex-wrapa align-items-center">
                                     <div class="quentity_btn">
                                         <button class="btn btn-danger v_decrement"><i class="fal fa-minus"></i></button>
@@ -133,9 +133,9 @@
 
                         <ul class="details_button_area d-flex flex-wrap">
                             @if ($product->quantity === 0)
-                            <li><a class="common_btn bg-danger" href="javascript:;">Stock Out</a></li>
+                            <li><a class="common_btn bg-danger" href="javascript:;">Agotado</a></li>
                             @else
-                            <li><a class="common_btn v_submit_button" href="#">add to cart</a></li>
+                            <li><a class="common_btn v_submit_button" href="#">Agregar a carrito</a></li>
                             @endif
                             <li><a class="wishlist" href="#"><i class="far fa-heart"></i></a></li>
                         </ul>
@@ -147,12 +147,12 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                    aria-selected="true">Description</button>
+                                    aria-selected="true">Descripción</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-contact" type="button" role="tab"
-                                    aria-controls="pills-contact" aria-selected="false">Reviews</button>
+                                    aria-controls="pills-contact" aria-selected="false">Comentarios</button>
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
@@ -195,7 +195,7 @@
                                                 </div>
                                                 @endif
                                                 @if (count($reviews) === 0)
-                                                    <div class="alert alert-warning mt-4">No review found!</div>
+                                                    <div class="alert alert-warning mt-4">No se encontró ninguna reseña!</div>
                                                 @endif
 
                                             </div>
@@ -204,12 +204,12 @@
                                         @auth
                                         <div class="col-lg-4">
                                             <div class="fp__post_review">
-                                                <h4>write a Review</h4>
+                                                <h4>Escribir una reseña</h4>
                                                 <form action="{{ route('product-review.store') }}" method="POST">
                                                     @csrf
                                                     <div class="row">
                                                         <div class="col-xl-12 mt-3">
-                                                            <label> Choose a rating</label>
+                                                            <label> Elige una calificación</label>
                                                             <select name="rating" id="rating_input" class="form-control ">
                                                                 <option value="5">5</option>
                                                                 <option value="4">4</option>
@@ -221,12 +221,12 @@
                                                         </div>
 
                                                         <div class="col-xl-12">
-                                                            <label for="">Review</label>
+                                                            <label for="">Reseña</label>
                                                             <textarea style="margin-top: 2px" name="review" rows="3" placeholder="Write your review"></textarea>
                                                         </div>
                                                         <div class="col-12">
-                                                            <button class="common_btn" type="submit">submit
-                                                                review</button>
+                                                            <button class="common_btn" type="submit">
+                                                                Reseña</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -234,8 +234,8 @@
                                         </div>
                                         @else
                                         <div class="col-lg-4">
-                                            <h4>write a Review</h4>
-                                            <div class="alert alert-warning mt-4">Please login first to add review.</div>
+                                            <h4>Escribir una reseña</h4>
+                                            <div class="alert alert-warning mt-4">Inicie sesión primero para agregar una reseña.</div>
                                         </div>
                                         @endauth
                                     </div>

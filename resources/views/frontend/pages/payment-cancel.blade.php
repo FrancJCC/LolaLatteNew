@@ -9,10 +9,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>Order</h1>
+                    <h1>Pedido</h1>
                     <ul>
-                        {{-- <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">payment</a></li> --}}
+                        {{-- <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Pago</a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -37,7 +37,7 @@
 
                     <h4>Transaction Faild!</h4>
                     <p><b class="mx-5">{{ session()->has('errors') ? session('errors')->first('error') : '' }}</b></p>
-                    <a class="common_btn mt-4" href="{{ route('dashboard') }}">Go to Payment Page</a>
+                    <a class="common_btn mt-4" href="{{ route('dashboard') }}">Ir a la página de pago</a>
                 </div>
 
             </div>

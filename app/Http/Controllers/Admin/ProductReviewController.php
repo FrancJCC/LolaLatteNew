@@ -20,16 +20,16 @@ class ProductReviewController extends Controller
         $review = ProductRating::findOrFail($request->id);
         $review->status = $request->status;
         $review->save();
-        return response(['status' => 'success', 'message' => 'updated successfully!']);
+        return response(['status' => 'success', 'message' => 'Actualizado exitosamente!!']);
     }
 
     function destroy(string $id) : Response {
         try {
             $review = ProductRating::findOrFail($id);
             $review->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salio mal!']);
         }
     }
 }

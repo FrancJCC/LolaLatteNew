@@ -1,16 +1,16 @@
 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
     <div class="fp_dashboard_body">
-        <h3>order list</h3>
+        <h3>Lista de pedidos</h3>
         <div class="fp_dashboard_order">
             <div class="table-responsive">
                 <table class="table">
                     <tbody>
                         <tr class="t_header">
-                            <th>Order</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Amount</th>
-                            <th>Action</th>
+                            <th>Orden</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                            <th>Importe</th>
+                            <th>Acción</th>
                         </tr>
                         @foreach ($orders as $order)
                         <tr>
@@ -22,13 +22,13 @@
                             </td>
                             <td>
                                 @if ($order->order_status === 'pending')
-                                <span class="active">Pending</span>
+                                <span class="active">Pendiente</span>
                                 @elseif ($order->order_status === 'in_process')
-                                <span class="active">In Process</span>
+                                <span class="active">En proceso</span>
                                 @elseif ($order->order_status === 'delivered')
-                                <span class="complete">Delivered</span>
+                                <span class="complete">Entregado</span>
                                 @elseif ($order->order_status === 'declined')
-                                <span class="cancel">Declined</span>
+                                <span class="cancel">Denegado</span>
                                 @endif
                             </td>
                             <td>
@@ -44,7 +44,7 @@
         </div>
         @foreach ($orders as $order)
         <div class="fp__invoice invoice_details_{{ $order->id }}">
-            <a class="go_back d-print-none"><i class="fas fa-long-arrow-alt-left"></i> go back</a>
+            <a class="go_back d-print-none"><i class="fas fa-long-arrow-alt-left"></i> Volver</a>
             <div class="fp__track_order d-print-none">
                 <ul>
 
@@ -94,9 +94,9 @@
                         <tbody>
                             <tr class="border_none">
                                 <th class="sl_no">SL</th>
-                                <th class="package">item description</th>
-                                <th class="price">Price</th>
-                                <th class="qnty">Quantity</th>
+                                <th class="package">Descripción del artículo</th>
+                                <th class="price">Precio</th>
+                                <th class="qnty">Cantidad</th>
                                 <th class="total">Total</th>
                             </tr>
 
@@ -152,7 +152,7 @@
                             </tr>
                             <tr>
                                 <td class="package coupon" colspan="3">
-                                    <b>(-) Discount coupon</b>
+                                    <b>(-) Cupón de descuento</b>
                                 </td>
                                 <td class="qnty">
                                     <b></b>
@@ -163,7 +163,7 @@
                             </tr>
                             <tr>
                                 <td class="package coast" colspan="3">
-                                    <b>(+) Shipping Cost</b>
+                                    <b>(+) Costo de envío</b>
                                 </td>
                                 <td class="qnty">
                                     <b></b>
@@ -174,7 +174,7 @@
                             </tr>
                             <tr>
                                 <td class="package" colspan="3">
-                                    <b>Total Paid</b>
+                                    <b>Pago total</b>
                                 </td>
                                 <td class="qnty">
                                     <b></b>
@@ -187,8 +187,7 @@
                     </table>
                 </div>
             </div>
-            <a class="print_btn common_btn d-print-none" href="javascript:;" onclick="printInvoice('{{ $order->id }}')"><i class="far fa-print "></i> print
-                PDF</a>
+            <a class="print_btn common_btn d-print-none" href="javascript:;" onclick="printInvoice('{{ $order->id }}')"><i class="far fa-print "></i> Imprimir PDF</a>
 
         </div>
         @endforeach

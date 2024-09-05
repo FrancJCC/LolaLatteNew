@@ -47,7 +47,7 @@ class AdminManagementController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado exitosamente');
 
         return to_route('admin.admin-management.index');
     }
@@ -69,7 +69,7 @@ class AdminManagementController extends Controller
         $user = User::findOrFail($id);
 
         if($id == 1){
-            throw ValidationException::withMessages(['you can not update super admin']);
+            throw ValidationException::withMessages(['No `puedes actualizar a super admin']);
         }
 
         $request->validate([
@@ -90,7 +90,7 @@ class AdminManagementController extends Controller
         $user->role = $request->role;
         $user->save();
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado exitosamente');
 
         return to_route('admin.admin-management.index');
     }
@@ -101,14 +101,14 @@ class AdminManagementController extends Controller
     public function destroy(string $id)
     {
         if($id == 1){
-            throw ValidationException::withMessages(['you can not delete super admin']);
+            throw ValidationException::withMessages(['No puedes eliminar a super admin']);
         }
         try {
             $admin = User::findOrFail($id);
             $admin->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salio mal!']);
         }
     }
 }

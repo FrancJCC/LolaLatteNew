@@ -10,7 +10,7 @@
                 <div class="fp__breadcrumb_text">
                     <h1>{{ $page->name }}</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
                         <li><a href="javascript:;">{{ $page->name }}</a></li>
                     </ul>
                 </div>

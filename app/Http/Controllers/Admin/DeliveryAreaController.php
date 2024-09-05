@@ -40,7 +40,7 @@ class DeliveryAreaController extends Controller
         $area->status = $request->status;
         $area->save();
 
-        toastr()->success('Created Successfully!');
+        toastr()->success('Creado exitosamente!');
 
         return to_route('admin.delivery-area.index');
     }
@@ -68,7 +68,7 @@ class DeliveryAreaController extends Controller
         $area->status = $request->status;
         $area->save();
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!');
 
         return to_route('admin.delivery-area.index');
     }
@@ -81,9 +81,9 @@ class DeliveryAreaController extends Controller
         try {
             DeliveryArea::findOrFail($id)->delete();
 
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         }catch(\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

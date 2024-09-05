@@ -14,7 +14,7 @@
                 <div class="alert alert-warning alert-has-icon">
                     <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
                     <div class="alert-body">
-                        <div class="alert-title">Danger</div>
+                        <div class="alert-title">Peligro</div>
                         Si activa esta acción, se borrará toda su base de datos..
                     </div>
 
@@ -40,7 +40,7 @@
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
+                    confirmButtonText: 'Si, borralo!'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({

@@ -26,7 +26,7 @@ class CartController extends Controller
     {
         $product = Product::with(['productSizes', 'productOptions'])->findOrFail($request->product_id);
         if($product->quantity < $request->quantity){
-            throw ValidationException::withMessages(['Quantity is not available!']);
+            throw ValidationException::withMessages(['Cantidad no disponible!']);
         }
 
         try {

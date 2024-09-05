@@ -3,15 +3,15 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Slider</h1>
+            <h1>Carrusel</h1>
         </div>
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>All Sliders</h4>
+                <h4> Todos Los Carrusel</h4>
                 <div class="card-header-action">
                     <a href="{{ route('admin.slider.create') }}" class="btn btn-primary">
-                        Create new
+                        Crear Nuevo
                     </a>
                 </div>
             </div>

@@ -38,7 +38,7 @@ class WhyChooseUsController extends Controller
     {
         WhyChooseUs::create($request->validated());
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado con exito');
 
         return to_route('admin.why-choose-us.index');
     }
@@ -88,7 +88,7 @@ class WhyChooseUsController extends Controller
             ['value' => $request->why_choose_sub_title]
         );
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!');
 
         return redirect()->back();
     }
@@ -101,9 +101,9 @@ class WhyChooseUsController extends Controller
         try{
             $whyChooseUs = WhyChooseUs::findOrFail($id);
             $whyChooseUs->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         }catch(\Exception $e){
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

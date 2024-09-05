@@ -8,9 +8,9 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>Our Latest Food Blogs</h1>
+                    <h1>Nuestros últimos blogs de comida</h1>
                     <ul>
-                        <li><a href="index.html">home</a></li>
+                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="#">blogs</a></li>
                     </ul>
                 </div>
@@ -30,11 +30,11 @@
             <form class="fp__search_menu_form mb-4" action="{{ route('blogs') }}" method="GET">
                 <div class="row">
                     <div class="col-xl-6 col-md-5">
-                        <input type="text" placeholder="Search..." name="search" value="{{ @request()->search }}">
+                        <input type="text" placeholder="Buscando..." name="Buscando" value="{{ @request()->search }}">
                     </div>
                     <div class="col-xl-4 col-md-4">
-                        <select class="nice-select" name="category">
-                            <option value="">All</option>
+                        <select class="nice-select" name="categoria">
+                            <option value="">Seleccionar categoría del blog </option>
                             @foreach ($categories as $category)
                             <option @selected(@request()->category == $category->slug) value="{{ $category->slug }}">{{ $category->name }}</option>
                             @endforeach
@@ -42,7 +42,7 @@
                         </select>
                     </div>
                     <div class="col-xl-2 col-md-3">
-                        <button type="submit" class="common_btn">search</button>
+                        <button type="submit" class="common_btn">Buscar</button>
                     </div>
                 </div>
             </form>
@@ -66,7 +66,7 @@
                 </div>
                 @endforeach
                 @if ($blogs->isEmpty())
-                    <h5 class="text-center">No Blog Found!</h5>
+                    <h5 class="text-center">¡No se encontró ningún blog!</h5>
                 @endif
 
             </div>

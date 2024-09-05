@@ -40,7 +40,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-12">
-                            <h4>Agregar Nuev Dirección</h4>
+                            <h4>Agregar Nueva Dirección</h4>
                         </div>
 
                         <div class="col-md-12 col-lg-12 col-xl-12">

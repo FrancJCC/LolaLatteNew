@@ -29,7 +29,7 @@ class ClearDatabaseController extends Controller
             // delete updated files
             $this->deleteFiles();
 
-            return response(['status' => 'success', 'message' => 'Database wiped successfully!']);
+            return response(['status' => 'success', 'message' => 'Base de datos limpiada exitosamente!']);
 
 
         }catch(\Exception $e){

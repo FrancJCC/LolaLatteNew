@@ -9,22 +9,22 @@
                     <div class="row">
                         <div class="col-xl-6">
                             <div class="fp__comment_imput_single">
-                                <label>Current Password</label>
+                                <label>Contraseña actual</label>
                                 <input type="password" placeholder="Current Password" name="current_password">
                             </div>
                         </div>
                         <div class="col-xl-6">
                             <div class="fp__comment_imput_single">
-                                <label>New Password</label>
+                                <label>Nueva Contraseña</label>
                                 <input type="password" placeholder="New Password" name="password">
                             </div>
                         </div>
                         <div class="col-xl-12">
                             <div class="fp__comment_imput_single">
-                                <label>confirm Password</label>
+                                <label>Confirmar Contraseña</label>
                                 <input type="password" placeholder="Confirm Password" name="password_confirmation">
                             </div>
-                            <button type="submit" class="common_btn mt_20">submit</button>
+                            <button type="submit" class="common_btn mt_20">Subir</button>
                         </div>
                     </div>
                 </form>

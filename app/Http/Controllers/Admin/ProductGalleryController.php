@@ -41,7 +41,7 @@ class ProductGalleryController extends Controller
         $gallery->image = $imagePath;
         $gallery->save();
 
-        toastr()->success('Created Successfully!');
+        toastr()->success('Creado exitosamente!');
 
         return redirect()->back();
 
@@ -57,9 +57,9 @@ class ProductGalleryController extends Controller
             $this->removeImage($image->image);
             $image->delete();
 
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Elimminado exitosmaente!']);
         }catch(\Exception $e){
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>reset password</h1>
+                    <h1>Restablecer Contraseña</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">reset password</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Restablecer contraseña</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,8 +31,8 @@
                 <div class="row wow fadeInUp" data-wow-duration="1s">
                     <div class="col-xxl-5 col-xl-6 col-md-9 col-lg-7 m-auto">
                         <div class="fp__login_area">
-                            <h2>Welcome back!</h2>
-                            <p>forgot password</p>
+                            <h2>Bienvenido otravez!</h2>
+                            <p>Olvidar contraseña</p>
                             <form method="POST" action="{{ route('password.store') }}">
                                 @csrf
                                 <div class="row">
@@ -47,7 +47,7 @@
 
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
-                                            <label>password</label>
+                                            <label>Contraseña</label>
                                             <input type="password" name="password"  placeholder="Password">
                                         </div>
                                     </div>
@@ -62,14 +62,14 @@
 
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
-                                            <button type="submit" class="common_btn">reset password</button>
+                                            <button type="submit" class="common_btn">Restablecer contraseña</button>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                             <p class="create_account d-flex justify-content-between">
-                                <a href="{{ route('login') }}">login</a>
-                                <a href="{{ route('register') }}">Create Account</a>
+                                <a href="{{ route('login') }}">Registrarse</a>
+                                <a href="{{ route('register') }}">Crear cuenta</a>
                             </p>
                         </div>
                     </div>

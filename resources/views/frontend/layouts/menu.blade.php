@@ -39,8 +39,8 @@
                     <div class="fp__search_form">
                         <form action="{{ route('product.index') }}" method="GET">
                             <span class="close_search"><i class="far fa-times"></i></span>
-                            <input type="text" placeholder="Search . . ." name="search">
-                            <button type="submit">search</button>
+                            <input type="text" placeholder="Buscando . . ." name="search">
+                            <button type="submit">Buscar</button>
                         </form>
                     </div>
                 </li>
@@ -65,7 +65,7 @@
                 </li>
                 <li>
                     <a class="common_btn" href="#" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">reservation</a>
+                        data-bs-target="#staticBackdrop">reservación</a>
                 </li>
             </ul>
         </div>
@@ -102,8 +102,8 @@
 
         </ul>
         <p class="subtotal">sub total <span class="cart_subtotal">{{ currencyPosition(cartTotal()) }}</span></p>
-        <a class="cart_view" href="{{ route('cart.index') }}"> view cart</a>
-        {{-- <a class="checkout" href="check_out.html">checkout</a> --}}
+        <a class="cart_view" href="{{ route('cart.index') }}"> vista de carta</a>
+        {{-- <a class="checkout" href="check_out.html">Verificar</a> --}}
     </div>
 </div>
 @php
@@ -115,23 +115,23 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Book a Table</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Reservación</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form class="fp__reservation_form" action="{{ route('reservation.store') }}" method="POST">
                         @csrf
-                        <input class="reservation_input" type="text" placeholder="Name" name="name">
-                        <input class="reservation_input" type="text" placeholder="Phone" name="phone">
-                        <input class="reservation_input" type="date" name="date">
+                        <input class="reservation_input" type="text" placeholder="Nombre" name="Nombre">
+                        <input class="reservation_input" type="text" placeholder="Telefono" name="Telefono">
+                        <input class="reservation_input" type="date" name="Fecha">
                         <select class="reservation_input nice-select" name="time">
-                            <option value="">select time</option>
+                            <option value="">Seleccionar horario</option>
                             @foreach ($reservationTimes as $time)
                             <option value="{{ $time->start_time }}-{{ $time->end_time }}">{{ $time->start_time }} to {{ $time->end_time }}</option>
                             @endforeach
                         </select>
-                        <input class="reservation_input" type="text" placeholder="Persons" name="persons">
-                        <button type="submit" class="btn_submit">book table</button>
+                        <input class="reservation_input" type="text" placeholder="Número de personas" name="Numero de personas">
+                        <button type="submit" class="btn_submit">Reservaciones</button>
                     </form>
                 </div>
             </div>

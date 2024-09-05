@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>privacy policy</h1>
+                    <h1>Política de privacidad</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">privacy policy</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Política de privacidad</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div class="col-xl-12 wow fadeInUp" data-wow-duration="1s">
                     <div class="fp__career_det_text">
                         {!! @$privacyPolicy->content !!}
-                        <a href="{{ url('/') }}" class="common_btn">go home</a>
+                        <a href="{{ url('/') }}" class="common_btn">Ir a Casa</a>
                     </div>
 
                 </div>

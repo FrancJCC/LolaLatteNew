@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>payment</h1>
+                    <h1>Pago</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">payment</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Pago</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +27,7 @@
     ==============================-->
     <section class="fp__payment_page mt_100 xs_mt_70 mb_100 xs_mb_70">
         <div class="container">
-            <h2>Choose Your Payment Gateway</h2>
+            <h2>Elija su metodo de pago</h2>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="fp__payment_area">
@@ -68,8 +68,8 @@
                     <div class="fp__cart_list_footer_button">
                         <h6>total cart</h6>
                         <p>subtotal: <span>{{ currencyPosition($subtotal) }}</span></p>
-                        <p>delivery: <span>{{ currencyPosition($delivery) }}</span></p>
-                        <p>discount: <span>{{ currencyPosition($discount) }}</span></p>
+                        <p>Entrega: <span>{{ currencyPosition($delivery) }}</span></p>
+                        <p>Descuento: <span>{{ currencyPosition($discount) }}</span></p>
                         <p class="total"><span>total:</span> <span>{{ currencyPosition($grandTotal) }}</span></p>
 
                     </div>

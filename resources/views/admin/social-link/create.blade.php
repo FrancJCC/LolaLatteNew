@@ -3,12 +3,12 @@
 @section('content')
 <section class="section">
     <div class="section-header">
-        <h1>Social Link</h1>
+        <h1>Redes Sociales</h1>
     </div>
 
     <div class="card card-primary">
         <div class="card-header">
-            <h4>Create Link</h4>
+            <h4>Crear link </h4>
 
         </div>
         <div class="card-body">
@@ -16,13 +16,13 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="">Icon</label>
+                    <label for="">Icono</label>
                     <br>
                     <button class="btn btn-secondary" role="iconpicker" name="icon" data-icon=""></button>
                 </div>
 
                 <div class="form-group">
-                    <label>Name</label>
+                    <label>Nombre</label>
                     <input type="text" name="name" class="form-control">
                 </div>
 
@@ -32,9 +32,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Status</label>
+                    <label>Estados </label>
                     <select name="status" class="form-control" id="">
-                        <option value="1">Yes</option>
+                        <option value="1">Si</option>
                         <option value="0">No</option>
                     </select>
                 </div>

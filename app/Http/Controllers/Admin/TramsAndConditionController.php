@@ -28,7 +28,7 @@ class TramsAndConditionController extends Controller
                 'content' => $request->content
             ]
         );
-        toastr()->success('Updated Successfully');
+        toastr()->success('Actualizado con éxito');
 
         return redirect()->back();
     }

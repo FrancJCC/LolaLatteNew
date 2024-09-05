@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>Trams and Conditions</h1>
+                    <h1>Terminos y condiciones</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">trams and conditions</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Terminos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div class="col-xl-12 wow fadeInUp" data-wow-duration="1s">
                     <div class="fp__career_det_text">
                         {!! @$tramsAndConditions->content !!}
-                        <a href="{{ url('/') }}" class="common_btn">go home</a>
+                        <a href="{{ url('/') }}" class="common_btn">Ir a inicio</a>
                     </div>
 
                 </div>

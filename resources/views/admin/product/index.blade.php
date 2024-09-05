@@ -3,15 +3,15 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Products</h1>
+            <h1>Productos</h1>
         </div>
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>All Products</h4>
+                <h4>Todos los Productos</h4>
                 <div class="card-header-action">
                     <a href="{{ route('admin.product.create') }}" class="btn btn-primary">
-                        Create new
+                        Crear Nuevo
                     </a>
                 </div>
             </div>
@@ -25,3 +25,4 @@
 @push('scripts')
     {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
 @endpush
+4

@@ -24,7 +24,7 @@ class CheckoutController extends Controller
             return response(['delivery_fee' => $deliveryFee, 'grand_total' => $grandTotal]);
         }catch(\Exception $e) {
             logger($e);
-            return response(['message' => 'Something Went Wrong!'], 422);
+            return response(['message' => 'Algo salio mal!'], 422);
         }
     }
 

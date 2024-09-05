@@ -9,9 +9,9 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>user dashboard</h1>
+                    <h1>Panel de control del usuario</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
                         <li><a href="javascript:;">dashboard</a></li>
                     </ul>
                 </div>
@@ -46,32 +46,32 @@
                                 aria-orientation="vertical">
                                 <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-                                    aria-selected="true"><span><i class="fas fa-user"></i></span> Parsonal Info</button>
+                                    aria-selected="true"><span><i class="fas fa-user"></i></span> Informacion Personal</button>
 
                                 <button class="nav-link" id="v-pills-address-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-address" type="button" role="tab"
                                     aria-controls="v-pills-address" aria-selected="true"><span><i
-                                            class="fas fa-user"></i></span>address</button>
+                                            class="fas fa-user"></i></span>Dirreccion</button>
 
                                 <button class="nav-link" id="v-pills-reservation-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-reservation" type="button" role="tab"
                                 aria-controls="v-pills-reservation" aria-selected="false"><span><i
-                                        class="fas fa-bags-shopping"></i></span> Reservations</button>
+                                        class="fas fa-bags-shopping"></i></span> Reservas</button>
 
                                 <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-profile" type="button" role="tab"
                                     aria-controls="v-pills-profile" aria-selected="false"><span><i
-                                            class="fas fa-bags-shopping"></i></span> Order</button>
+                                            class="fas fa-bags-shopping"></i></span> Orden</button>
 
                                 <button class="nav-link" id="v-pills-wishlist-tab2" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-wishlist" type="button" role="tab"
                                     aria-controls="v-pills-wishlist" aria-selected="false"><span><i
-                                            class="far fa-heart"></i></span> wishlist</button>
+                                            class="far fa-heart"></i></span> Lista de deseos</button>
 
                                 <button class="nav-link" id="v-pills-review-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-review" type="button" role="tab"
                                     aria-controls="v-pills-review" aria-selected="false"><span><i
-                                            class="fas fa-star"></i></span> Reviews</button>
+                                            class="fas fa-star"></i></span> Comentarios</button>
                                 @php
                                 $unseenMessages = \App\Models\Chat::where(['sender_id' => 1, 'receiver_id' => auth()->user()->id, 'seen' => 0])->count();
                                 @endphp
@@ -85,8 +85,8 @@
                                 <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-settings" type="button" role="tab"
                                     aria-controls="v-pills-settings" aria-selected="false"><span><i
-                                            class="fas fa-user-lock"></i></span> Change Password </button>
-                  <!-- Authentication -->
+                                            class="fas fa-user-lock"></i></span> Cambiar contraseña </button>
+                <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
 
@@ -137,7 +137,7 @@
                             <img src="images/menu1.png" alt="menu" class="img-fluid w-100">
                         </div>
                         <div class="fp__cart_popup_text">
-                            <a href="#" class="title">Maxican  Test Better</a>
+                            <a href="#" class="title">Maxican Pizza Test Better</a>
                             <p class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>

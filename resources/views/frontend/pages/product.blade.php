@@ -10,7 +10,7 @@
                 <div class="fp__breadcrumb_text">
                     <h1>Productos</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">inicio</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
                         <li><a href="javascript:;">Productos</a></li>
                     </ul>
                 </div>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-xl-4 col-md-4">
                         <select class="nice-select" name="category">
-                            <option value="">Todas Las Categorias</option>
+                            <option value="">Todas las categorias</option>
                             @foreach ($categories as $category)
                                 <option @selected(@request()->category == $category->slug) value="{{ $category->slug }}">{{ $category->name }}</option>
                             @endforeach
@@ -42,7 +42,7 @@
                         </select>
                     </div>
                     <div class="col-xl-2 col-md-3">
-                        <button type="submit" class="common_btn">search</button>
+                        <button type="submit" class="common_btn">Buscar</button>
                     </div>
                 </div>
             </form>
@@ -85,7 +85,7 @@
                 @endforeach
 
                 @if (count($products) === 0)
-                <h4 class="text-center mt-5">No Product Found!</h4>
+                <h4 class="text-center mt-5">Producto no encintrado!</h4>
                 @endif
 
             </div>

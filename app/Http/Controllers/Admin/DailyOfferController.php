@@ -55,7 +55,7 @@ class DailyOfferController extends Controller
         $offer->status = $request->status;
         $offer->save();
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado exitosamente');
 
         return to_route('admin.daily-offer.index');
     }
@@ -84,7 +84,7 @@ class DailyOfferController extends Controller
         $offer->status = $request->status;
         $offer->save();
 
-        toastr()->success('Updated Successfully');
+        toastr()->success('Actualizado exitosamente');
 
         return to_route('admin.daily-offer.index');
     }
@@ -104,7 +104,7 @@ class DailyOfferController extends Controller
             );
         }
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!');
 
         return redirect()->back();
     }
@@ -117,9 +117,9 @@ class DailyOfferController extends Controller
         try {
             $dailyOffer = DailyOffer::findOrFail($id);
             $dailyOffer->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

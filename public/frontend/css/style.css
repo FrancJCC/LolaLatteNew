@@ -31,7 +31,7 @@ h6 {
     margin: 0;
     padding: 0;
     font-family: var(--headingFont);
-    color: var(--colorBlack);
+    color: #636569;
 }
 
 p,
@@ -41,6 +41,15 @@ span {
     font-weight: 400;
     margin: 0;
     color: var(--paraColor);
+}
+
+
+p2
+{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    color: #fff;
 }
 
 body {
@@ -97,7 +106,7 @@ button {
     COMMON CSS START
 ============================*/
 .common_btn {
-    background: var(--colorPrimary);
+    background: rgb(106, 126, 71);
     text-transform: capitalize !important;
     color: var(--colorWhite) !important;
     padding: 10px 25px !important;
@@ -252,7 +261,7 @@ button {
 .main_menu .navbar-nav .nav-item .nav-link {
     font-size: 16px;
     font-weight: 600;
-    color: var(--colorBlack);
+    color: #636569;
     text-transform: capitalize;
     margin: 0px 15px;
     padding: 0;
@@ -393,7 +402,7 @@ button {
 .main_menu .menu_icon li a {
     font-size: 16px;
     font-weight: 600;
-    color: var(--colorBlack);
+    color: #636569;
     text-transform: capitalize;
     margin: 0px 10px;
     padding: 0;
@@ -858,7 +867,7 @@ button {
 }
 
 .fp__banner_overlay {
-    background: rgb(255 255 255 / 70%);
+    background: #0000007e;
     height: 100%;
     position: relative;
 }
@@ -973,6 +982,10 @@ button {
 }
 
 .fp__banner_text p {
+    font-size: 18px;
+    margin: 15px 0px 28px 0px;
+}
+.fp__banner_text p2 {
     font-size: 18px;
     margin: 15px 0px 28px 0px;
 }
@@ -2441,7 +2454,7 @@ footer {
     cursor: pointer;
     text-align: center;
     transform: rotate(90deg);
-    background: var(--colorPrimary);
+    background: rgb(106, 126, 71);
     border: 1px solid var(--colorWhite);
     color: var(--colorWhite);
     text-transform: capitalize;

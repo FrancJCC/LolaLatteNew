@@ -31,7 +31,7 @@ class ContactController extends Controller
             ]
         );
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado con exito');
 
         return redirect()->back();
     }

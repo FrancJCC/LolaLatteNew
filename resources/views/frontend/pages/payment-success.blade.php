@@ -9,10 +9,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>Order</h1>
+                    <h1>Pedido</h1>
                     <ul>
-                        {{-- <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">payment</a></li> --}}
+                        {{-- <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Pago </a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -38,8 +38,8 @@
                         color: #fff;"></i>
                     </div>
 
-                    <h4>Order Placed Successfully!</h4>
-                    <a class="common_btn mt-4" href="{{ route('dashboard') }}">Go to Dahsboard</a>
+                    <h4>¡Pedido realizado con éxito!</h4>
+                    <a class="common_btn mt-4" href="{{ route('dashboard') }}">Ir al panel de control</a>
                 </div>
 
             </div>

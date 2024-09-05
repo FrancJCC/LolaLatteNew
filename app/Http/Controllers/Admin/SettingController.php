@@ -41,7 +41,7 @@ class SettingController extends Controller
         $settingsService = app(SettingsService::class);
         $settingsService->clearCachedSettings();
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!!');
 
         return redirect()->back();
     }
@@ -65,7 +65,7 @@ class SettingController extends Controller
         $settingsService = app(SettingsService::class);
         $settingsService->clearCachedSettings();
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!!');
 
         return redirect()->back();
     }
@@ -94,7 +94,7 @@ class SettingController extends Controller
         $settingsService->clearCachedSettings();
         Cache::forget('mail_settings');
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!!');
 
         return redirect()->back();
     }
@@ -126,7 +126,7 @@ class SettingController extends Controller
         $settingsService->clearCachedSettings();
         Cache::forget('mail_settings');
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!!');
 
         return redirect()->back();
     }
@@ -148,7 +148,7 @@ class SettingController extends Controller
         $settingsService->clearCachedSettings();
         Cache::forget('mail_settings');
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!!');
 
         return redirect()->back();
     }
@@ -171,7 +171,7 @@ class SettingController extends Controller
         $settingsService->clearCachedSettings();
         Cache::forget('mail_settings');
 
-        toastr()->success('Updated Successfully!');
+        toastr()->success('Actualizado exitosamente!!');
 
         return redirect()->back();
     }

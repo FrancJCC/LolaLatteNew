@@ -32,7 +32,7 @@ class ProductOptionController extends Controller
         $option->price = $request->price;
         $option->save();
 
-        toastr()->success('Created Successfully!');
+        toastr()->success('Creado exitosamente!');
 
         return redirect()->back();
     }
@@ -47,9 +47,9 @@ class ProductOptionController extends Controller
             $image = ProductOption::findOrFail($id);
             $image->delete();
 
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         }catch(\Exception $e){
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

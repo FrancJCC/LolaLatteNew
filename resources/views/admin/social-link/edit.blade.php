@@ -3,12 +3,12 @@
 @section('content')
 <section class="section">
     <div class="section-header">
-        <h1>Social Link</h1>
+        <h1>Redes Sociales</h1>
     </div>
 
     <div class="card card-primary">
         <div class="card-header">
-            <h4>Update Link</h4>
+            <h4>Actualizar Link</h4>
 
         </div>
         <div class="card-body">
@@ -16,13 +16,13 @@
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label for="">Icon</label>
+                    <label for="">Icono</label>
                     <br>
                     <button class="btn btn-secondary" role="iconpicker" name="icon" data-icon="{{ $link->icon }}"></button>
                 </div>
 
                 <div class="form-group">
-                    <label>Name</label>
+                    <label>Nombre</label>
                     <input type="text" name="name" class="form-control" value="{{ $link->name }}">
                 </div>
 
@@ -32,13 +32,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Status</label>
+                    <label>Estados</label>
                     <select name="status" class="form-control" id="">
                         <option @selected($link->status === 1) value="1">Yes</option>
                         <option @selected($link->status === 0) value="0">No</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
             </form>
         </div>
     </div>

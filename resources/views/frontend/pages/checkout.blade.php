@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>checkout</h1>
+                    <h1>Verificar</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">checkout</a></li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="javascript:;">Verificar</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,8 +31,8 @@
                 <div class="col-lg-8 col-lg-7 wow fadeInUp" data-wow-duration="1s">
                     <div class="fp__checkout_form">
                         <div class="fp__check_form">
-                            <h5>select address <a href="#" data-bs-toggle="modal" data-bs-target="#address_modal"><i
-                                        class="far fa-plus"></i> add address</a></h5>
+                            <h5>Selecionar dirección <a href="#" data-bs-toggle="modal" data-bs-target="#address_modal"><i
+                                        class="far fa-plus"></i> Agregar dirección </a></h5>
 
                             <div class="fp__address_modal">
                                 <div class="modal fade" id="address_modal" data-bs-backdrop="static"
@@ -41,7 +41,7 @@
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="address_modalLabel">add new address
+                                                <h1 class="modal-title fs-5" id="address_modalLabel">Agregar nueva dirección 
                                                 </h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
@@ -55,7 +55,7 @@
                                                             <div class="col-md-12 col-lg-12 col-xl-12">
                                                                 <div class="fp__check_single_form">
                                                                     <select class="nice-select" name="area">
-                                                                        <option value="">Slelect Area</option>
+                                                                        <option value="">Selecionar area</option>
                                                                         @foreach ($deliveryAreas as $area)
                                                                             <option value="{{ $area->id }}">
                                                                                 {{ $area->area_name }}</option>
@@ -67,20 +67,20 @@
 
                                                             <div class="col-md-6 col-lg-12 col-xl-6">
                                                                 <div class="fp__check_single_form">
-                                                                    <input type="text" placeholder="First Name"
+                                                                    <input type="text" placeholder="Nombre"
                                                                         name="first_name">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6 col-lg-12 col-xl-6">
                                                                 <div class="fp__check_single_form">
-                                                                    <input type="text" placeholder="Last Name"
+                                                                    <input type="text" placeholder="Apellido"
                                                                         name="last_name">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6 col-lg-12 col-xl-6">
                                                                 <div class="fp__check_single_form">
-                                                                    <input type="text" placeholder="Phone"
+                                                                    <input type="text" placeholder="Telefono"
                                                                         name="phone">
                                                                 </div>
                                                             </div>
@@ -93,7 +93,7 @@
 
                                                             <div class="col-md-12 col-lg-12 col-xl-12">
                                                                 <div class="fp__check_single_form">
-                                                                    <textarea cols="3" rows="4" placeholder="Address" name="address"></textarea>
+                                                                    <textarea cols="3" rows="4" placeholder="Dirección" name="address"></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="col-12">
@@ -104,7 +104,7 @@
                                                                             value="home">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
-                                                                            home
+                                                                            casa
                                                                         </label>
                                                                     </div>
                                                                     <div class="form-check">
@@ -113,16 +113,16 @@
                                                                             value="office">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault2">
-                                                                            office
+                                                                            officina 
                                                                         </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div  style="display:flex;">
                                                                 <button style="width: 200px" type="button"
-                                                                    class="common_btn cancel_new_address mr-2">cancel</button>
-                                                                <button style="width: 200px" type="submit" class="common_btn">save
-                                                                    address</button>
+                                                                    class="common_btn cancel_new_address mr-2">Cancelar</button>
+                                                                <button style="width: 200px" type="submit" class="common_btn">Guardar
+                                                                    Dirección</button>
                                                             </div>
                                                         </div>
                                                     </form>
@@ -142,9 +142,9 @@
                                                     id="home">
                                                 <label class="form-check-label" for="home">
                                                     @if ($address->type === 'home')
-                                                        <span class="icon"><i class="fas fa-home"></i> home</span>
+                                                        <span class="icon"><i class="fas fa-home"></i> Casa</span>
                                                     @else
-                                                        <span class="icon"><i class="fas fa-home"></i> office</span>
+                                                        <span class="icon"><i class="fas fa-home"></i> Officina</span>
                                                     @endif
                                                     <span class="address">{{ $address->address }},
                                                         {{ $address->deliveryArea?->area_name }}</span>
@@ -160,9 +160,9 @@
 
                 <div class="col-lg-4 wow fadeInUp" data-wow-duration="1s">
                     <div id="sticky_sidebar" class="fp__cart_list_footer_button">
-                        <h6>total cart</h6>
-                        <p>subtotal: <span>{{ currencyPosition(cartTotal()) }}</span></p>
-                        <p>delivery: <span id="delivery_fee">$00.00</span></p>
+                        <h6>Total del carrito</h6>
+                        <p>Subtotal: <span>{{ currencyPosition(cartTotal()) }}</span></p>
+                        <p>Tarifa de entrega: <span id="delivery_fee">$00.00</span></p>
                         @if (session()->has('coupon'))
                         <p>discount: <span>{{ currencyPosition(session()->get('coupon')['discount']) }}</span></p>
                         @else
@@ -171,7 +171,7 @@
                         @endif
                         <p class="total"><span>total:</span> <span id="grand_total">{{ currencyPosition(grandCartTotal()) }}</span></p>
 
-                        <a class="common_btn" id="procced_pmt_button" href=" #">Proceed to Payment</a>
+                        <a class="common_btn" id="procced_pmt_button" href=" #">Proceder al pago</a>
                     </div>
                 </div>
             </div>

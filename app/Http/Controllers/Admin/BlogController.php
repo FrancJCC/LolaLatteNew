@@ -61,7 +61,7 @@ class BlogController extends Controller
         $blog->status = $request->status;
         $blog->save();
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado exitosamente');
 
         return to_route('admin.blogs.index');
 
@@ -96,7 +96,7 @@ class BlogController extends Controller
         $blog->status = $request->status;
         $blog->save();
 
-        toastr()->success('Created Successfully');
+        toastr()->success('Creado exitosamente');
 
         return to_route('admin.blogs.index');
     }
@@ -110,9 +110,9 @@ class BlogController extends Controller
             $blog = Blog::findOrFail($id);
             $this->removeImage($blog->image);
             $blog->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salio mal!']);
         }
     }
 
@@ -127,7 +127,7 @@ class BlogController extends Controller
         $comment->status = !$comment->status;
         $comment->save();
 
-        toastr()->success('Updated Successfully');
+        toastr()->success('Actualizado exitosamente');
         return redirect()->back();
     }
 
@@ -135,9 +135,9 @@ class BlogController extends Controller
         try {
             $comment = BlogComment::findOrFail($id);
             $comment->delete();
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         } catch (\Exception $e) {
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salio mal!']);
         }
     }
 }

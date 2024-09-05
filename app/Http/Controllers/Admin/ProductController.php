@@ -61,7 +61,7 @@ class ProductController extends Controller
         $product->status = $request->status;
         $product->save();
 
-        toastr()->success('Create Successfully');
+        toastr()->success('Creado exitosamente');
 
         return to_route('admin.product.index');
 
@@ -103,7 +103,7 @@ class ProductController extends Controller
                 $product->status = $request->status;
                 $product->save();
 
-                toastr()->success('Update Successfully');
+                toastr()->success('Actualizado exitosamente');
 
                 return to_route('admin.product.index');
     }
@@ -118,9 +118,9 @@ class ProductController extends Controller
             $this->removeImage($product->thumb_image);
             $product->delete();
 
-            return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+            return response(['status' => 'success', 'message' => 'Eliminado exitosamente!']);
         }catch(\Exception $e){
-            return response(['status' => 'error', 'message' => 'something went wrong!']);
+            return response(['status' => 'error', 'message' => 'Algo salió mal!']);
         }
     }
 }

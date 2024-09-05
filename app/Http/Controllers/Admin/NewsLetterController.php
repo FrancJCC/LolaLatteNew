@@ -27,7 +27,7 @@ class NewsLetterController extends Controller
 
         Mail::to($subscribers)->send(new NewsLetter($request->subject, $request->message));
 
-        toastr()->success('News letter sent successfully!');
+        toastr()->success('Nuevas noticias enviadas!');
 
         return redirect()->back();
     }

@@ -7,7 +7,7 @@
                     <tbody>
                         <tr class="t_header">
                             <th>No</th>
-                            <th style="width: 40%">Product</th>
+                            <th style="width: 40%">Producto</th>
                             <th>Stock</th>
                             <th>action</th>
 
